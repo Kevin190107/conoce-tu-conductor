@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Turitrans · Perfil del Conductor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+
+    <style>
+        :root {
+            --bg-dark: #0e1a2b;
+            --blue: #134074;
+            --accent: #f9a03f;
+            --white: #ffffff;
+            --gray-light: #f5f7fa;
+            --gray: #d1d5db;
+            --gray-dark: #4b5563;
+            --radius: 14px;
+            --shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            --transition: 0.3s ease;
+            --font: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font);
+            background: linear-gradient(145deg, #0b1e3f, #0e1a2b);
+            color: var(--gray-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            max-width: 430px;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+        }
+
+        .card-header {
+            background-color: #d8d9db;
+            /* Fondo blanco para dar protagonismo al logo */
+            padding: 1.5rem 1rem;
+            display: flex;
+            justify-content: center;
+            border-bottom: 2px solid var(--blue);
+        }
+
+        .card-header img {
+            width: 200px;
+            /* Aumentado el tamaño */
+            max-width: 100%;
+            height: auto;
+            filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+        }
+
+
+        .card-body {
+            padding: 2rem;
+            display: grid;
+            gap: 2rem;
+        }
+
+        .driver-info {
+            text-align: center;
+        }
+
+        .driver-info h1 {
+            font-size: 1.9rem;
+            font-weight: 800;
+            color: var(--blue);
+            margin-bottom: 0.3rem;
+        }
+
+        .driver-info .title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--gray-dark);
+            margin-bottom: 1.2rem;
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+            background-color: var(--accent);
+            color: var(--white);
+            padding: 0.8rem 2rem;
+            font-weight: 700;
+            font-size: 1rem;
+            border-radius: 40px;
+            text-decoration: none;
+            transition: all var(--transition);
+            box-shadow: 0 6px 20px rgba(249, 160, 63, 0.5);
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #f88e1a;
+            transform: scale(1.05);
+        }
+
+        ion-icon {
+            font-size: 20px;
+            vertical-align: middle;
+            color: currentColor;
+            /* Para que tome el color del botón */
+        }
+
+
+        .section {
+            background-color: var(--gray-light);
+            border-radius: 12px;
+            padding: 1.5rem;
+            width: 100%;
+        }
+
+        .section h2 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--blue);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+            padding-bottom: 0.3rem;
+            width: 100%;
+        }
+
+        .section p {
+            margin: 0.5rem 0;
+            font-weight: 600;
+        }
+
+        .section p span {
+            font-weight: 700;
+            color: var(--accent);
+            display: inline-block;
+            width: 100px;
+        }
+
+        .card-footer {
+            background-color: var(--blue);
+            text-align: center;
+            padding: 1rem;
+            color: var(--gray);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        @media (max-width: 500px) {
+            .card-body {
+                padding: 1.5rem;
+            }
+
+            .driver-info h1 {
+                font-size: 1.6rem;
+            }
+
+            .whatsapp-btn {
+                padding: 0.7rem 1.8rem;
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="card" role="main" aria-label="Perfil del conductor Turitrans">
+        <header class="card-header">
+            <img src="./Logo Turitrans.png" alt="Logo Turitrans" />
+        </header>
+
+        <div class="card-body">
+            <section class="driver-info">
+                <p class="title">Tu conductor asignado es:</p>
+                <h1>Fredy Galindo</h1>
+                <br>
+                <a href="https://wa.me/573124480874" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                    Contactar por WhatsApp
+                </a>
+
+
+
+            </section>
+
+            <section class="section">
+                <h2>Detalle del Servicio</h2>
+                <p><span>Viajero:</span> Juan Perez</p>
+                <p><span>Origen:</span> Siberia</p>
+                <p><span>Destino:</span> Calle 93a #19-25</p>
+                <p><span>Hora:</span> 15:30</p>
+            </section>
+
+            <section class="section">
+                <h2>Vehículo Asignado</h2>
+                <p><span>Modelo:</span> Camioneta Duster</p>
+                <p><span>Placa:</span> WNK 662</p>
+            </section>
+        </div>
+
+        <footer class="card-footer">
+            TURITRANS S.A.S · NIT 901.398.167 · © 2025 Todos los derechos reservados.
+        </footer>
+    </main>
+
+</body>
+
+</html>
